@@ -1,3 +1,7 @@
+/* temp colors */
+/* barnard blue: #01427c */
+/* background: #f0f8ff */
+
 body {
     background-color: #f0f8ff;
     scroll-behavior: smooth;
@@ -7,35 +11,38 @@ body {
 }
 
 .navbar {
-    background-color: #01427c;
+    background-color: #f0f8ff;
     display: flex;
     position: sticky;
     top: 0; 
-    padding: 15px;
-    /* float: right; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
 }
 
 .navbar a {
-    color: #f0f8ff;
+    color: #01427c;
     text-decoration: none;
-    /* float: right; */
+    padding: 30px;
 }
 
 .navbar a:hover {
     text-decoration: underline;
 }
 
-.nav-link {
-    /* display: flex; */
-    margin-left: auto;
-    padding: 10px;
+.name {
+    color: #01427c;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 5px 20px;
+    /* float: left; */
 }
 
 .section {
     padding: 50px;
     font-size: 24px;
-    border: 2px solid red;
     min-height: 100px;
 }
