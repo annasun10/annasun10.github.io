@@ -1,0 +1,41 @@
+body {
+    background-color: #f0f8ff;
+    scroll-behavior: smooth;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #01427c;
+    display: flex;
+    position: sticky;
+    top: 0; 
+    padding: 15px;
+    /* float: right; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+.navbar a {
+    color: #f0f8ff;
+    text-decoration: none;
+    /* float: right; */
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.nav-link {
+    /* display: flex; */
+    margin-left: auto;
+    padding: 10px;
+}
+
+.section {
+    padding: 50px;
+    font-size: 24px;
+    border: 2px solid red;
+    min-height: 100px;
+}
