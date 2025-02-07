@@ -8,6 +8,7 @@ body {
     color: black;
     margin: 0;
     padding: 0;
+    font-family: 'Lato', sans-serif;
 }
 
 .navbar {
@@ -17,7 +18,6 @@ body {
     top: 0; 
     justify-content: space-between;
     align-items: center;
-    font-family: 'Lato', sans-serif;
     font-size: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 30px 40px;
@@ -38,11 +38,31 @@ body {
     font-size: 2rem;
     font-weight: 700;
     padding: 5px 20px;
-    /* float: left; */
 }
 
 .section {
     padding: 50px;
     font-size: 24px;
     min-height: 100px;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.intro {
+    font-size: 5rem;
+    color: #01427c;
+    padding: 50px;
+}
+
+#pic-of-me {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
