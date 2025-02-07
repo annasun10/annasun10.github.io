@@ -6,9 +6,10 @@ body {
     background-color: #f0f8ff;
     scroll-behavior: smooth;
     color: black;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    max-width: 1500px;
 }
 
 .navbar {
@@ -19,8 +20,9 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 2px -2px rgba(0, 0, 0, 0.1); 
     padding: 30px 40px;
+    width: 100%;
 }
 
 .navbar a {
@@ -50,13 +52,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
 }
 
 .intro {
     font-size: 5rem;
     color: #01427c;
-    padding: 50px;
+    padding: 50px 50px 0 50px;
+}
+
+#pronouns {
+    text-align: center;
+    margin-top: -40px;
+    font-style: italic;
+    color: #5b7891;
 }
 
 #pic-of-me {
@@ -65,4 +73,13 @@ body {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-me {
+    color: #01427c;
+}
+
+.about-me-text {
+    margin: 70px;
+    font-family: 'Nunito', sans-serif;
 }
