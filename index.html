@@ -59,7 +59,14 @@
                     <li>Other: Rock Climbing, Crocheting, Playing Video Games</li>
                 </ul>
 
-                <button class="dropdown">Relevant Coursework</button>
+                <div class="dropdown">
+                    <button class="dropdown-button" onClick="toggleDropdown()">Relevant Coursework</button>
+                    <div class="dropdown-text" id="myDropdown">
+                        <p>Artificial Intelligence</p>
+                        <p>Intro to Databases</p>
+                        <p>User Interface Design</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -77,5 +84,7 @@
         <div class="section" id="contact-me">
             contact me
         </div>
+
+        <script src="script.js"></script>
     </body>
 </html>
