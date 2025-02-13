@@ -2,6 +2,10 @@
 /* barnard blue: #01427c */
 /* background: #f0f8ff */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #f0f8ff;
     scroll-behavior: smooth;
@@ -24,6 +28,7 @@ body {
     box-shadow: 0 6px 2px -2px rgba(0, 0, 0, 0.1); 
     padding: 30px 40px;
     width: 100%;
+    z-index: 1000;
 }
 
 .navbar a {
@@ -78,7 +83,7 @@ body {
 }
 
 /* about me section */
-.about-me {
+.header {
     color: #01427c;
 }
 
@@ -135,4 +140,146 @@ body {
 .dropdown-text.show {
     opacity: 1;
     visibility: visible;
+}
+
+/* experience */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #01427c;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+  
+.container {
+    padding: 10px 30px;
+    position: relative;
+    width: 45%;
+}
+
+.container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: rgb(241, 240, 240);
+    border: 4px solid #01427c;
+    top: 20%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: -5%;
+}
+
+.left::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+    top: 20%;
+    z-index: 1; 
+    border-style: solid;
+    border-width: 12px 0 16px 20px;  
+    border-color: transparent transparent transparent rgb(241, 240, 240);
+    left: 95%;
+}
+
+.left::after {
+    top: 20%;
+    right: -12.5%;
+}
+
+.right {
+    left: 55%;
+}
+
+.right::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    top: 20%;
+    z-index: 1;
+    width: 0;
+    left: 10px; 
+    border-style: solid;
+    border-width: 12px 0 16px 20px; 
+    border-color: transparent transparent transparent rgb(241, 240, 240);
+    rotate: 180deg;
+}
+
+.right::after {
+    top: 20%;
+    left: -13%;
+}
+
+.content {
+    padding: 20px;
+    background-color: rgb(241, 240, 240);
+    position: relative;
+    border-radius: 50px;
+}
+
+.position {
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+}
+
+.exp-header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    font-size: 1.1rem;
+}
+
+.exp-header h4{
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 0 20px;
+    margin: 10px 0 0 0;
+}
+
+.date {
+    text-align: right;
+    font-size: 1.1rem;
+    padding: 0 20px;
+    margin: 10px 0 0 0;
+}
+
+.company {
+    display: block;
+    font-size: 1.1rem;
+    padding: 0 20px;
+    margin: 0;
+    font-style: italic;
+}
+
+.exp-list {
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
+.exp-list li {
+    line-height: 1.7;
 }
