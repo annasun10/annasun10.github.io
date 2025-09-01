@@ -1,170 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anna Sun's Portfolio – projects, experience, and contact.">
+    <title>Anna Sun Portfolio</title>
 
-        <title>Anna Sun</title>
+    <link rel="stylesheet" href="./style.css">
 
-        <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
 
-        <!-- fonts -->
+  <body>
+    <div class="wrap">
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a class="brand" href="#top" title="Home">
+          <img src="images/barnard.png" alt="Barnard logo" class="brand-logo">
+          </span><b>anna&nbsp;sun</b></a>
+        <div class="navlinks">
+          <a class="chip" href="#about">about</a>
+          <a class="chip" href="#experience">experience</a>
+          <a class="chip" href="#projects">projects</a>
+          <a class="chip" href="#contact">contact</a>
+        </div>
+      </nav>
 
-        <!-- lato -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+      <header id="top" class="hero intro" aria-labelledby="intro-title">
+        <div class="intro-text">
+          <h1 id="intro-title">hi, i’m anna!</h1>
+          <p class="pronouns">(she/her)</p>
+        </div>
+        <div class="pfp-wrap">
+          <div class="pfp">
+            <img src="images/me.jpeg" alt="Portrait of Anna Sun" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
+            <div class="fallback" style="display:none">AS</div>
+          </div>
+        </div>
+      </header>
 
-        <!-- nunito -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    </head>
+      <!-- About -->
+      <section id="about" aria-labelledby="about-h2">
+        <h2 id="about-h2">about me</h2>
+        <div class="card">
+          <p>I’m Anna Sun, a junior at <b>Barnard College of Columbia University</b> pursuing a BA in
+            <b>Computer Science</b> with a minor in Psychology. I will graduate in <b>May 2027</b>.</p>
 
-    <body>
-        <!-- navbar -->
-        <div class="navbar">
-            <div class="name">
-                anna sun
+          <h3>Skills & Interests</h3>
+          <ul>
+            <li><b>Languages:</b> Python, Java, C++, C, HTML, CSS, JavaScript</li>
+            <li><b>Interests:</b> Artificial Intelligence, Web Development, App Development, Social Media Marketing</li>
+            <li><b>Tools:</b> Git, Gerrit, MongoDB, Unity</li>
+            <li><b>Other:</b> Rock climbing, crocheting, video games</li>
+          </ul>
+
+          <h3 class="rc-title">Relevant Coursework</h3>
+          <ul class="rc-list">
+            <li>Artificial Intelligence</li>
+            <li>Intro to Databases</li>
+            <li>User Interface Design</li>
+            <li>Advanced Programming</li>
+            <li>Data Structures</li>
+            <li>Fundamentals of Computer Systems</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" aria-labelledby="exp-h2">
+        <h2 id="exp-h2">experience</h2>
+
+        <div class="card timeline">
+          <!-- Marathon -->
+          <div class="tl-item">
+            <time>Aug 2025 – Present</time>
+            <div>
+              <b>Software Engineer Intern</b> · Marathon Petroleum Corporation
+              <div class="muted">San Antonio, TX</div>
+              <div class="muted">Skills: C#, Git</div>
             </div>
-            <div class="nav-links">
-                <a href="#home" class="nav-link">home</a>
-                <a href="#about-me" class="nav-link">about me</a>
-                <a href="#experience" class="nav-link">experience</a>
-                <a href="#projects" class="nav-link">projects</a>
-                <a href="#contact-me" class="nav-link">contact me</a>
+          </div>
+
+          <!-- AWS -->
+          <div class="tl-item">
+            <time>May 2025 – Aug 2025</time>
+            <div>
+              <b>Software Development Engineer Intern</b> · Amazon Web Services (AWS) — Redshift
+              <div class="muted">East Palo Alto, CA</div>
+              <ul class="muted">
+                <li>Implemented a memory-efficient tree structure for Redshift’s online resize deserialize stage (projected ~30% runtime reduction on internal benchmarks).</li>
+                <li>Improved performance and reduced memory use via better data layout and traversal in a distributed warehouse.</li>
+                <li>Shipped production code and collaborated across teams using Gerrit code reviews.</li>
+              </ul>
+              <div class="muted">Skills: C++, Python, Git, Gerrit, Collaboration</div>
             </div>
-        </div>
-        
-        <!-- home -->
-        <div class="section" id="home">
-            <div class="intro-container">
-                <h1 class="intro">hi, i'm anna!</h1>
-                <p id="pronouns">(she/her)</p>
+          </div>
+
+          <!-- Bili -->
+          <div class="tl-item">
+            <time>Dec 2024 – Mar 2025</time>
+            <div>
+              <b>Sales Engineer Intern</b> · Bili
+              <div class="muted">Remote</div>
+              <ul class="muted">
+                <li>Assisted in designing Multi-AI Agent systems using model-based and agent-based modeling.</li>
+                <li>Ran TikTok & Instagram campaigns to drive brand awareness and engagement.</li>
+                <li>Translated complex technical concepts into clear, business-friendly language for clients.</li>
+              </ul>
+              <div class="muted">Skills: Communication, Social Media Marketing, Strategic Planning, Creativity & Innovation</div>
             </div>
+          </div>
 
-            <img id="pic-of-me" src="images/me.jpeg" alt="Picture of Me">
-        </div>
-
-        <!-- about me -->
-        <div class="section" id="about-me">
-            <h1 class="header">about me</h1>
-            <div class="about-me-text">
-                I'm Anna Sun, a sophomore at <b>Barnard College of Columbia University</b> studying <b>Computer Science</b> with a minor in Psychology. I will graduate by <b>May 2027</b>.
-
-                <h4>Skills & Interests</h4>
-                <ul>
-                    <li><b>Languages</b>: Python, Java, HTML, CSS, JavaScript, C</li>
-                    <li><b>Interests</b>: Artificial Intelligence, Web Development, App Development, Social Media Marketing</li>
-                    <li><b>Tools</b>: Git, MongoDB, Unity</li>
-                    <li>Other: Rock Climbing, Crocheting, Playing Video Games</li>
-                </ul>
-
-                <div class="dropdown">
-                    <button class="dropdown-button" onClick="toggleDropdown()">Relevant Coursework<span class="caret"></span></button>
-                    <!-- delete id if i don't add more dropdowns -->
-                    <div class="dropdown-text" id="myDropdown">
-                        <p>Artificial Intelligence</p>
-                        <p>Intro to Databases</p>
-                        <p>User Interface Design</p>
-                        <p>Advanced Programming</p>
-                        <p>Data Structures</p>
-                        <p>Fundamentals of Computer Systems</p>
-                    </div>
-                </div>
+          <!-- GMU -->
+          <div class="tl-item">
+            <time>May 2024 – Aug 2024</time>
+            <div>
+              <b>Research Assistant</b> · George Mason University
+              <div class="muted">Fairfax, VA</div>
+              <ul class="muted">
+                <li>Led development of <i>HardenVR</i>, a transformer-based system to detect harassment in social VR.</li>
+                <li>Built interactive Mozilla Hubs environments on AWS to replicate realistic scenarios.</li>
+                <li>Designed and ran user testing; collected datasets to support future research.</li>
+              </ul>
+              <div class="muted">Skills: Research, User Testing, Data Analysis, Communication, Collaboration, Problem Solving</div>
             </div>
+          </div>
+
+          <!-- 4th Degree Marketing -->
+          <div class="tl-item">
+            <time>May 2024 – Aug 2024</time>
+            <div>
+              <b>Marketing Assistant Intern</b> · 4th Degree Marketing
+              <div class="muted">Lorton, VA</div>
+              <ul class="muted">
+                <li>Improved workflows and templates across Search/Discovery/YouTube/Amazon Ads, conversion tracking, and billing (~15% higher conversion rate).</li>
+                <li>Optimized Google Ads budgets for ~30% more cost-efficient CPCs.</li>
+              </ul>
+              <div class="muted">Skills: Google Ads, Digital Marketing, Advertising, Strategic Planning, Data Analysis</div>
+            </div>
+          </div>
+
+          <!-- TechSequences -->
+          <div class="tl-item">
+            <time>Dec 2022 – Mar 2023</time>
+            <div>
+              <b>Research Intern</b> · TechSequences
+              <div class="muted">Remote</div>
+              <ul class="muted">
+                <li>Researched AI, platform policy, and tech ethics; identified 15 potential podcast guests.</li>
+                <li>Wrote scripts for 4 podcast episodes and blog posts on current tech issues.</li>
+              </ul>
+              <div class="muted">Skills: Research, Online Research, Communication</div>
+            </div>
+          </div>
+
+          <!-- Mathnasium -->
+          <div class="tl-item">
+            <time>Dec 2019 – Mar 2023</time>
+            <div>
+              <b>Mathematics Tutor</b> · Mathnasium
+              <div class="muted">Alexandria, VA</div>
+              <ul class="muted">
+                <li>Tutored ~30 students (elementary through high school) across homework, projects, and test prep.</li>
+                <li>Built problem-solving confidence and math fundamentals through individualized plans.</li>
+              </ul>
+              <div class="muted">Skills: Communication, Tutoring, Problem Solving, Mathematics</div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <!-- experience -->
-         <div class="section" id="experience">
-            <h1 class="header">experience</h1>
+      <!-- Projects -->
+      <section id="projects" aria-labelledby="projects-h2">
+        <h2 id="projects-h2">projects</h2>
+        <div class="grid cols-3">
+          <!-- Portfolio -->
+          <article class="card project">
+            <div class="thumb">
+              <img src="images/portfolio.png" alt="Portfolio website screenshot" loading="lazy">
+            </div>
+            <time class="date">Aug 2025</time>
+            <h3><a href="https://annasun10.github.io" target="_blank" rel="noopener">Personal Portfolio Website</a></h3>
+            <p class="muted">Responsive single-page site with sticky nav, smooth scrolling, and accessible landmarks.</p>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          </article>
 
-            <!-- timeline -->
-             <div class="timeline">
-                <div class="left container">
-                    <div class="content">
-                        <div class="exp-header">
-                            <h4 class="position">Sales Engineer Intern</h4>
-                            <span class="date">Dec 2024 -- Present</span>
-                        </div>
-                        <span class="company">Bili</span>
-                        <ul class="exp-list">
-                            <li>Assist in crafting Multi-AI Agent systems using Model-Based System Engineering and Agent-Based Modeling</li>
-                            <li>Develop and execute engaging TikTok and Instagram campaigns to promote Bili’s products and services, driving increased brand awareness and audience engagement</li>
-                            <li>Translate complex technical concepts into simple, business-friendly language for potential clients on social media platforms and in client interactions</li>
-                        </ul>
-                    </div>
-                </div>
+          <!-- Piano App -->
+          <article class="card project">
+            <div class="thumb">
+              <img src="images/piano.png" alt="Piano learning web app screenshot" loading="lazy">
+            </div>
+            <time class="date">May 2025</time>
+            <h3><a href="https://github.com/liemma/4170project" target="_blank" rel="noopener">Piano Learning Web App</a></h3>
+            <p class="muted">Multi-page Flask app with dynamic routing, interactive lessons, audio playback, and responsive UI (COMS 4170 final, team of 3).</p>
+            <div class="tags"><span class="tag">Flask</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          </article>
 
-                <div class="right container">
-                    <div class="content">
-                        <div class="exp-header">
-                            <h4 class="position">Research Assistant</h4>
-                            <span class="date">May 2024 -- Aug 2024</span>
-                        </div>
-                        <span class="company">George Mason University</span>
-                            <ul class="exp-list">
-                                <li>Hand-selected as lead research assistant for CS PhD candidate to engineer HardenVR, an innovative solution leveraging a transformer-based model to enhance accuracy in detecting harassment in VR</li>
-                                <li>Developed an interactive Mozilla Hubs environment on Amazon Web Services to replicate and observe realistic harassment scenarios</li>
-                                <li>Designed and conducted user testing to identify potential issues and collected a dataset to support future research on harassment in social VR</li>
-                            </ul>
-                    </div>
-                </div>
-                
-                <div class="left container">
-                    <div class="content">
-                        <div class="exp-header">
-                            <h4 class="position">Marketing Assistant Intern</h4>
-                            <span class="date">May 2024 -- Aug 2024</span>
-                        </div>
-                        <span class="company">4th Degree Marketing</span>
-                        <ul class="exp-list">
-                            <li>Improved workflows and templates for Search, Discovery, YouTube, Amazon Ads, Conversion tracking, and Billing processing, increasing the Conversion rate by 15%</li>
-                            <li>Developed and implemented budget optimizations within Google Ads, leading to 30% more cost efficient CPCs</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="right container">
-                    <div class="content">
-                        <div class="exp-header">
-                            <h4 class="position">Research Intern</h4>
-                            <span class="date">Dec 2022 -- Mar 2023</span>
-                        </div>
-                        <span class="company">TechSequences</span>
-                            <ul class="exp-list">
-                                <li>Researched current events in technology such as AI, the Twitter takeover, code of ethics, and identified 15 potential guest speakers</li>
-                                <li>Wrote scripts for 4 podcast episodes and blog posts on themed current issues in technology</li>
-                            </ul>
-                    </div>
-                </div>
-
-                <div class="left container">
-                    <div class="content">
-                        <div class="exp-header">
-                            <h4 class="position">Mathematics Tutor</h4>
-                            <span class="date">Dec 2019 -- Mar 2023</span>
-                        </div>
-                        <span class="company">Mathnasium</span>
-                        <ul class="exp-list">
-                            <li>Tutored 30 students in math ranging from elementary to high school levels</li>
-                            <li>Assisted students with school homework, projects, test preparation, and other math-related assignments</li>
-                        </ul>
-                    </div>
-                </div>
-             </div>
-         </div>
-
-        <!-- projects -->
-        <div class="section" id="projects">
-            <h1 class="header">projects</h1>
+          <!-- Goblattle -->
+          <article class="card project">
+            <div class="thumb">
+              <img src="images/goblattle.png" alt="Goblattle game screenshot" loading="lazy">
+            </div>
+            <time class="date">Feb 2024</time>
+            <h3><a href="https://geryon-games.itch.io/goblattle" target="_blank" rel="noopener">Goblattle</a></h3>
+            <p class="muted">LionJam 48-hour Unity game; implemented combat logic and UI polish, designed retro 8-bit graphics.</p>
+            <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">GitHub</span></div>
+          </article>
         </div>
+      </section>
 
-        <!-- contact me -->
-        <div class="section" id="contact-me">
-            <h1 class="header">contact me</h1>
+      <!-- Contact -->
+      <section id="contact" aria-labelledby="contact-h2">
+        <h2 id="contact-h2">contact</h2>
+        <div class="card">
+          <div class="cta" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+            <a class="email-text" href="mailto:ams2670@barnard.edu">ams2670@barnard.edu</a>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a class="btn primary" href="https://www.linkedin.com/in/anna-sun10" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn primary" href="https://github.com/annasun10" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <script src="script.js"></script>
-    </body>
+      <footer>
+        <div class="wrap" style="padding:0">© <span id="y"></span> Anna Sun · Pink theme with ❤</div>
+      </footer>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
 </html>

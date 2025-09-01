@@ -1,63 +1,36 @@
-// toggles the dropdown menu
-function toggleDropdown(event) {
-    let dropdown = event.currentTarget.nextElementSibling;
-    let caret = event.currentTarget.querySelector(".caret");
+// Year stamp
+document.getElementById('y')?.textContent = new Date().getFullYear();
 
-    let isOpen = dropdown.classList.contains("show");
+// Highlight active nav chip while scrolling + set aria-current
+const sections = [...document.querySelectorAll('section, header#top')];
+const chips = [...document.querySelectorAll('.nav a.chip')];
 
-    if (isOpen) { // closes dropdown
-        dropdown.classList.remove("show");
-        caret.classList.remove("rotate");
-
-        dropdown.style.maxHeight = "0";
-        dropdown.style.opacity = "0";
-
-        setTimeout(() => {
-            dropdown.style.visibility = "hidden";
-            
-        }, 300);
-    } else { // opens dropdown
-        dropdown.style.display = "block";
-        dropdown.style.visibility = "visible";
-        dropdown.style.maxHeight = dropdown.scrollHeight + "px";
-        dropdown.style.opacity = "1";
-
-        setTimeout(() => dropdown.classList.add("show"), 10);
-
-        caret.classList.add("rotate");
-    }
-}
-
-// close the dropdown if screen is clicked outside of it
-function clickOutside(event) {
-    document.querySelectorAll(".dropdown-text.show").forEach((dropdown) => {
-        let button = dropdown.previousElementSibling;
-
-        // closes dropdown if the click is outside
-        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-            dropdown.classList.remove("show");
-            button.querySelector(".caret").classList.remove("rotate");
-
-            dropdown.style.maxHeight = "0";
-            dropdown.style.opacity = "0";
-
-            setTimeout(() => {
-                dropdown.style.display = "none"; 
-            }, 300);
-        }
-    });
-}
-
-// wait for the DOM to load before attaching event listeners
-document.addEventListener("DOMContentLoaded", function () {
-    // attaches click event to all dropdown buttons
-    document.querySelectorAll(".dropdown-button").forEach((button) => {
-        button.addEventListener("click", function (event) {
-            event.stopPropagation(); 
-            toggleDropdown(event);
+const obs = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = `#${entry.target.id || 'top'}`;
+        chips.forEach((chip) => {
+          const isActive = chip.getAttribute('href') === id;
+          chip.classList.toggle('active', isActive);
+          if (isActive) chip.setAttribute('aria-current', 'true');
+          else chip.removeAttribute('aria-current');
         });
+      }
     });
+  },
+  { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+);
 
-    // attach global click listener to detect outside clicks
-    window.addEventListener("click", clickOutside);
+sections.forEach((section) => obs.observe(section));
+
+// Ensure correct chip is active on initial load (when hash exists)
+window.addEventListener('DOMContentLoaded', () => {
+  const id = location.hash || '#top';
+  chips.forEach((chip) => {
+    const isActive = chip.getAttribute('href') === id;
+    chip.classList.toggle('active', isActive);
+    if (isActive) chip.setAttribute('aria-current', 'true');
+    else chip.removeAttribute('aria-current');
+  });
 });
